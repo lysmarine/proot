@@ -28,6 +28,7 @@ Initialize a virtual machine for each supported distribution::
   for distro in alpine centos debian; do
     cd "test/vagrant/${distro}"
     vagrant up
+    cd ../../../
   done
    
 .. _vagrant-sshfs: https://github.com/dustymabe/vagrant-sshfs
