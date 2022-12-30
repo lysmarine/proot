@@ -15,14 +15,20 @@ each supported distribution::
 Vagrant
 -------
 
-**Note**: this requires installing the `vagrant-sshfs`_ plugin.
+Fork this github repostiory located at `<https://github.com/proot-me/proot>`_
 
-.. _vagrant-sshfs: https://github.com/dustymabe/vagrant-sshfs
+``git clone [YOUR_REPOSITORY_URL]`` Clone the repository on your local machine
 
-The following command will initialize a virtual machine for
-each supported distribution::
+``sudo apt-get install vagrant vagrant-sshfs`` Install vagrant on Debian and derivatives:
+ 
+``cd proot`` change directory into proot repository. 
+ 
+Initialize a virtual machine for each supported distribution::
 
   for distro in alpine centos debian; do
     cd "test/vagrant/${distro}"
     vagrant up
   done
+   
+.. _vagrant-sshfs: https://github.com/dustymabe/vagrant-sshfs
+
